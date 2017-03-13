@@ -1,3 +1,13 @@
+// Linked Lists Use cases:
+// O(1):
+//   -Adding/Removing head
+//   -Adding/Removing Tail
+// O(n):
+//   -Searching through Linked List:
+//
+// Memory Management Benefits:
+//   -data doesn't have to be stored together
+
 function LinkedList() {
   this.head = null;
   this.tail = null;
