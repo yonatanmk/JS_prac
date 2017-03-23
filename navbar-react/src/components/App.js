@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import Dropdown from './Dropdown';
 // import DropdownTrigger from './DropdownTrigger';
 // import DropdownContent from './DropdownContent';
+import Article from './Article';
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class App extends Component {
 
     return (
       <div>
-
+        <h1>Helllo World</h1>
+        <Article />
       </div>
     );
   }
