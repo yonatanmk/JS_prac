@@ -57,7 +57,6 @@ nav {
         }
         &:not(:only-child):after {
           padding-left: 4px;
-          content: ' ▾';
         }
       } // Dropdown list
       ul li {
@@ -74,7 +73,7 @@ nav {
 // Dropdown list binds to JS toggle event
 .nav-dropdown {
   position: absolute;
-  display: none;
+  // display: none;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
