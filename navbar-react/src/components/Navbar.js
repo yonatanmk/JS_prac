@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Dropdown from './Dropdown';
 
-class Header extends Component  {
+class Navbar extends Component  {
   constructor(props) {
     super(props);
     this.state = {
@@ -90,4 +90,4 @@ class Header extends Component  {
 
 }
 
-export default Header;
+export default Navbar;
