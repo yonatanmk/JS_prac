@@ -5,10 +5,12 @@ class Header extends Component  {
   constructor(props) {
     super(props);
     this.state = {
-      openDropdown: null
+      openDropdown: null,
+      mobileIcon: null
     };
 
     this.setDropdown = this.setDropdown.bind(this);
+    this.setMobileIcon = this.setMobileIcon.bind(this);
   }
 
   setDropdown (target) {
@@ -16,6 +18,14 @@ class Header extends Component  {
       this.setState({ currentDropdown: null });
     } else {
       this.setState({ currentDropdown: target });
+    }
+  }
+
+  setMobileIcon () {
+    if (this.state.mobileIcon) {
+      this.setState({ mobileIcon: null });
+    } else {
+      this.setState({ mobileIcon: 'active' });
     }
   }
 
@@ -37,7 +47,11 @@ class Header extends Component  {
 
     return (
       <nav>
-        <div className="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+        <div className="nav-mobile">
+          <a className={this.state.mobileIcon} onClick={this.setMobileIcon} id="nav-toggle" href="#!">
+            <span></span>
+          </a>
+        </div>
         <ul className="nav-list">
           <li>
             <a href="#!">Home</a>
