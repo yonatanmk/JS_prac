@@ -6,7 +6,8 @@ class Navbar extends Component  {
     super(props);
     this.state = {
       openDropdown: null,
-      mobileIcon: null
+      mobileIcon: null,
+      mobileDisplay: 'inactive'
     };
 
     this.setDropdown = this.setDropdown.bind(this);
@@ -23,9 +24,9 @@ class Navbar extends Component  {
 
   setMobileIcon () {
     if (this.state.mobileIcon) {
-      this.setState({ mobileIcon: null });
+      this.setState({ mobileIcon: null, mobileDisplay: 'inactive' });
     } else {
-      this.setState({ mobileIcon: 'active' });
+      this.setState({ mobileIcon: 'active', mobileDisplay: null });
     }
   }
 
@@ -52,7 +53,7 @@ class Navbar extends Component  {
             <span></span>
           </a>
         </div>
-        <ul className="nav-list">
+        <ul className={`nav-list ${this.state.mobileDisplay}`}>
           <li>
             <a href="#!">Home</a>
           </li>

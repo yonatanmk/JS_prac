@@ -99,7 +99,7 @@ nav {
    width: 100%;
     padding: $nav-height 0 15px;
     ul {
-      display: none;
+      // display: none;
       li {
         float: none;
         a {
@@ -109,6 +109,9 @@ nav {
         ul li a {
           padding-left: 30px;
         }
+      }
+      &.inactive {
+        display: none;
       }
     }
   }
