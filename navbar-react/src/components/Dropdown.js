@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 
 class Dropdown extends Component {
+  constructor(props) {
+    super(props);
+
+
+    this.setDropdownHover = this.setDropdownHover.bind(this);
+    this.setDropdownClick = this.setDropdownClick.bind(this);
+  }
+
+  setDropdownHover () {
+    if (window.innerWidth > 800) {
+      this.props.setDropdown(this.props.id);
+    }
+  }
+
+  setDropdownClick () {
+    if (window.innerWidth <= 800) {
+      this.props.setDropdown(this.props.id);
+    }
+  }
 
   render () {
     let items;
@@ -18,7 +37,9 @@ class Dropdown extends Component {
 
     return (
       <div onMouseLeave={()=>this.props.setDropdown(null)}>
-        <a href="#!" onMouseEnter={()=>this.props.setDropdown(this.props.id)}>{this.props.label + ' ▾'}</a>
+        <a href="#!" onMouseEnter={this.setDropdownHover} onClick={this.setDropdownClick}>
+          {this.props.label + ' ▾'}
+        </a>
         <ul className="nav-dropdown">
           {items}
         </ul>
