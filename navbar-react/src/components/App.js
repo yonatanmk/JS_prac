@@ -1,26 +1,16 @@
-import React, { Component } from 'react';
-// import Dropdown from './Dropdown';
-// import DropdownTrigger from './DropdownTrigger';
-// import DropdownContent from './DropdownContent';
+import React from 'react';
 import Article from './Article';
 import Header from './Header';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
+const App = () => {
 
-  render() {
+  return (
+    <div>
+      <Header />
+      <Article />
+    </div>
+  );
 
-    return (
-      <div>
-        <Header />
-        <Article />
-      </div>
-    );
-  }
-}
+};
 
 export default App;

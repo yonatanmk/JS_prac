@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
 
 class Dropdown extends Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   display: false
-    // };
-
-    // this.toggleState = this.toggleState.bind(this);
-  }
-
-  // toggleState () {
-  //   this.setState({ display: !this.state.display} );
-  // }
 
   render () {
     let items;
     let counter = 0;
-    if (this.props.open) {
+    if (this.props.id == this.props.openDropdown) {
       items = this.props.items.map((item)=>{
         counter ++;
         return (

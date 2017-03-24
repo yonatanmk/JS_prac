@@ -5,17 +5,17 @@ class Header extends Component  {
   constructor(props) {
     super(props);
     this.state = {
-      dropdown: null
+      openDropdown: null
     };
 
     this.setDropdown = this.setDropdown.bind(this);
   }
 
   setDropdown (target) {
-    if (this.state.dropdown == target) {
-      this.setState({ dropdown: null });
+    if (this.state.currentDropdown == target) {
+      this.setState({ currentDropdown: null });
     } else {
-      this.setState({ dropdown: target });
+      this.setState({ currentDropdown: target });
     }
   }
 
@@ -47,11 +47,11 @@ class Header extends Component  {
           </li>
           <li>
             <Dropdown
-              id = {1}
+              id = { 1 }
               label = 'Services'
-              items = {servicesDropdown}
-              setDropdown = {this.setDropdown}
-              open = {this.state.dropdown == 1}
+              items = { servicesDropdown }
+              setDropdown = { this.setDropdown }
+              openDropdown = { this.state.currentDropdown }
             />
           </li>
           <li>
@@ -59,11 +59,11 @@ class Header extends Component  {
           </li>
           <li>
             <Dropdown
-              id = {2}
+              id = { 2 }
               label = 'Portfolio'
-              items = {portfolioDropdown}
-              setDropdown = {this.setDropdown}
-              open = {this.state.dropdown == 2}
+              items = { portfolioDropdown }
+              setDropdown = { this.setDropdown }
+              openDropdown = { this.state.currentDropdown }
             />
           </li>
           <li>
